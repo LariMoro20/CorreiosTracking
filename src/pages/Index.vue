@@ -1,7 +1,7 @@
 <template>
   <q-page class="q-py-md container">
     <div class="row flex justify-center">
-      <div class="col-5">
+      <div class="col-11 col-md-5">
         <q-input
           dense
           color="white"
@@ -24,7 +24,7 @@
     </div>
 
     <div
-      class="col-12 flex flex-center text-white q-pb-lg"
+      class="col-12 flex flex-center text-white q-py-lg"
       v-if="thepackage.codigo"
     >
       <div class="col-12">
@@ -36,7 +36,7 @@
 
     <div class="row" v-if="thepackage.eventos">
       <div
-        class="col-6 offset-md-3 q-mb-sm"
+        class="col-12 col-md-6 offset-md-3 q-mb-sm"
         v-for="(evento, ikey) in thepackage.eventos"
         :key="ikey"
       >
