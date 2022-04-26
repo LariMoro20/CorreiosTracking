@@ -40,7 +40,7 @@
       </div>
     </div>
 
-    <div class="row" v-if="thepackage.eventos">
+    <div class="row q-pa-sm" v-if="thepackage.eventos">
       <div
         class="col-12 col-md-6 offset-md-3 q-mb-sm"
         v-for="(evento, ikey) in thepackage.eventos"
@@ -54,7 +54,8 @@
             <p>
               Status: {{ evento.status }}<br />
               Data: {{ evento.data }} {{ evento.hora }}<br />
-              Local: {{ evento.local }}<br />
+              Local:<br />
+              {{ evento.local }}<br />
             </p>
           </div>
         </div>
