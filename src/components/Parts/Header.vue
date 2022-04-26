@@ -22,6 +22,6 @@ export default {
 
 <style>
 .header-logo-img {
-  width: 200px;
+  width: 240px;
 }
 </style>
