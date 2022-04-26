@@ -22,9 +22,15 @@
         </q-input>
       </div>
     </div>
+    <div
+      class="col-12 flex flex-center text-white q-py-sm"
+      v-if="error_resp && !thepackage.codigo"
+    >
+      Não foi possivel obter os dados, tente novamente
+    </div>
 
     <div
-      class="col-12 flex flex-center text-white q-py-lg"
+      class="col-12 flex flex-center text-white q-py-md"
       v-if="thepackage.codigo"
     >
       <div class="col-12">
@@ -60,7 +66,6 @@
 <script>
 import { defineComponent, ref, onMounted, onBeforeMount } from "vue";
 import { api } from "boot/axios";
-import { useRoute } from "vue-router";
 import { useQuasar } from "quasar";
 export default defineComponent({
   name: "Correios",
@@ -68,11 +73,13 @@ export default defineComponent({
   setup() {
     const tracking_code = ref("");
     const thepackage = ref([]);
+    const error_resp = ref(false);
     const $q = useQuasar();
 
     const handleGetPackage = async () => {
       $q.loading.show();
       try {
+        thepackage.value = [];
         await api
           .get(
             "https://api.linketrack.com/track/json?user=teste&token=1abcd00b2731640e886fb41a8a9671ad1434c599dbaa0a0de9a5aa619f29a83f&codigo=" +
@@ -81,15 +88,20 @@ export default defineComponent({
           .then((res) => {
             thepackage.value = res.data;
           });
+        mesage.value.status = true;
         $q.loading.hide();
       } catch (error) {
-        if (error.response.status == "429") await handleGetPackage();
+        if (error.response && error.response.status == "429") {
+          await handleGetPackage();
+        } else error_resp.value = true;
+        $q.loading.hide();
       }
     };
     return {
       tracking_code,
-      handleGetPackage,
       thepackage,
+      error_resp,
+      handleGetPackage,
     };
   },
 });
