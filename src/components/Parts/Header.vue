@@ -1,5 +1,5 @@
 <template>
-  <div class="header q-py-md bg-white">
+  <div class="header q-pt-md q-pb-sm bg-white">
     <div class="header-logo text-center">
       <div class="row">
         <div class="col-12">
