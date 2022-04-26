@@ -123,6 +123,16 @@ export default defineComponent({
 </script>
 <style scoped>
 .packpage__item {
-  border: 3px dashed #bcbcbc;
+  border-left: 3px dashed #bcbcbc;
+  border-bottom: 3px dashed #bcbcbc;
+}
+.packpage__item::before {
+  content: "---";
+  color: #bcbcbc;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
 }
 </style>
