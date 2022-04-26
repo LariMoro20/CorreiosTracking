@@ -1,37 +1,30 @@
 # Correios Tracking (correios-tracking)
 
-Correios Tracking
+Aplicação SPA desenvolvida em Vue.js utilizando Quasar framework.
 
-## Install the dependencies
+Para visualizar o layout: https://correiostracking-larimoro20.vercel.app/
+
+![imagem](https://github.com/LariMoro20/CorreiosTracking/blob/main/tela.png)
+Contem:
+
+- Reatividade;
+- Componentização;
+- Consumo de API;
+
+## Instalação
 
 ```bash
 npm install
 ```
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
+### Rodar a aplicação:
 
 ```bash
-quasar dev
+npm start
 ```
 
-### Lint the files
-
-```bash
-npm run lint
-```
-
-### Format the files
-
-```bash
-npm run format
-```
-
-### Build the app for production
+### Build da aplicação
 
 ```bash
 quasar build
 ```
-
-### Customize the configuration
-
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
