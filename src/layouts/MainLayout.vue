@@ -29,4 +29,7 @@ export default defineComponent({
 * {
   font-family: "Josefin Sans", sans-serif;
 }
+body {
+  line-height: normal;
+}
 </style>
