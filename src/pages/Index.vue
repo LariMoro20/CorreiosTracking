@@ -124,7 +124,6 @@ export default defineComponent({
 <style scoped>
 .packpage__item {
   border-left: 3px dashed #bcbcbc;
-  border-bottom: 3px dashed #bcbcbc;
 }
 .packpage__item::before {
   content: "---";
