@@ -1,6 +1,18 @@
 <template>
   <q-page class="q-py-md container">
     <div class="row flex justify-center">
+      <div class="col-12 flex flex-center text-white q-px-md q-pb-sm">
+        <p class="q-pa-none q-ma-none">
+          Rastreie aqui sua encomenda dos Correios, informando o código recebido
+          no momento da postagem pelo remetente. A aplicação usa a api
+          <a
+            href="https://api.linketrack.com/"
+            class="text-white"
+            target="_blank"
+            >LINK&TRACK</a
+          >, para obter o rastreamento da encomenda.
+        </p>
+      </div>
       <div class="col-11 col-md-5">
         <q-input
           dense
@@ -22,8 +34,9 @@
         </q-input>
       </div>
     </div>
+
     <div
-      class="col-12 flex flex-center text-white q-py-sm"
+      class="col-12 flex flex-center text-white q-pa-sm"
       v-if="error_resp && !thepackage.codigo"
     >
       Não foi possivel obter os dados, tente novamente
