@@ -26,10 +26,11 @@
         >
           <template v-slot:after>
             <q-btn
-              label="Procurar"
               @click="handleGetPackage"
               class="full-height full-width text-black bg-secondary"
-            />
+            >
+              <i class="text-h6 ri-search-line"></i>
+            </q-btn>
           </template>
         </q-input>
       </div>
