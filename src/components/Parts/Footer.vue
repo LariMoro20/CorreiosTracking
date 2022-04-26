@@ -3,7 +3,7 @@
     <div class="row">
       <div class="tracking__footer col-12 q-py-sm text-center flec column">
         <router-link to="/"
-          ><img class="footer__logo-img" src="/logo/logotrack.png"
+          ><img class="footer__logo-img q-my-sm" src="/logo/logotrack.png"
         /></router-link>
         <small>{{ year }} &copy; Lari Moro</small>
       </div>
@@ -27,6 +27,6 @@ a {
   text-decoration: none;
 }
 .footer__logo-img {
-  width: 70px;
+  width: 120px;
 }
 </style>
