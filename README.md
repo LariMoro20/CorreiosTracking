@@ -1,6 +1,6 @@
 # Correios Tracking (correios-tracking)
 
-Aplicação SPA desenvolvida em Vue.js utilizando Quasar framework.
+Aplicação SPA de rastreio de encomendas desenvolvida em Vue.js utilizando Quasar framework.
 
 Para visualizar o layout: https://correiostracking-larimoro20.vercel.app/
 
@@ -9,7 +9,7 @@ Contem:
 
 - Reatividade;
 - Componentização;
-- Consumo de API;
+- Consumo de API (https://api.linketrack.com/);
 
 ## Instalação
 
